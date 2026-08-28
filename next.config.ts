@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // 1. THIS FIXES THE DOCKER BUILD ERROR:
+  output: 'standalone',
+
+  // 2. THIS PREVENTS THE MIXED CONTENT ERROR:
   async rewrites() {
     return [
       {
