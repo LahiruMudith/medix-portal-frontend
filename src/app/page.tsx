@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const API_BASE = "http://136.69.15.83/api/v1";
+const API_BASE = "/api/v1";
 
 interface Patient {
   patientId: string;
