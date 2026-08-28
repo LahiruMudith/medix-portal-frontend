@@ -3,7 +3,7 @@ steps:
     args: 
       - 'build'
       - '--build-arg'
-      - 'NEXT_PUBLIC_API_GATEWAY_URL=hhttp://136.69.15.83/api/v1'
+      - 'NEXT_PUBLIC_API_GATEWAY_URL=http://136.69.15.83/api/v1'
       - '-t'
       - 'us-central1-docker.pkg.dev/project-dd639dbc-1e4a-48b8-bae/frontend-repo/medix-frontend:$SHORT_SHA'
       - '.'
