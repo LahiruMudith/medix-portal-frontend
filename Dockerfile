@@ -12,9 +12,10 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# Set API Gateway URL at build time (or rely on runtime env)
+# Set API Gateway URL at build time
 ARG NEXT_PUBLIC_API_GATEWAY_URL
-ENV NEXT_PUBLIC_API_GATEWAY_URL=$NEXT_PUBLIC_API_GATEWAY_URL
+ENV NEXT_PUBLIC_API_GATEWAY_URL=${NEXT_PUBLIC_API_GATEWAY_URL:-http://136.69.15.83/api/v1}
+ENV NEXT_PUBLIC_API_BASE_URL=${NEXT_PUBLIC_API_GATEWAY_URL:-http://136.69.15.83/api/v1}
 
 RUN npm run build
 # 4. Runner

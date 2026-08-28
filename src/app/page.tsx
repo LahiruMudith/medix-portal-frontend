@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE = process.env.NEXT_PUBLIC_API_GATEWAY_URL || process.env.NEXT_PUBLIC_API_BASE_URL || "http://136.69.15.83/api/v1";
 
 interface Patient {
   patientId: string;
